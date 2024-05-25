@@ -7,7 +7,7 @@ from selenium.webdriver.common.by import By
 def next_page(url):
     options = Options()
     options.add_argument('--headless=new')
-    service = Service(executable_path="../chromedriver.exe")
+    service = Service(executable_path="chromedriver.exe")
     driver = webdriver.Chrome(service=service, options=options)
     driver.get(url)
     pages = driver.find_element(By.XPATH, '/html/body/form[3]/div[1]').text.split()
